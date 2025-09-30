@@ -1607,7 +1607,7 @@ class Blobs(UserList):  # lgtm[py/missing-equals]
         :seealso: :meth:`plot_box` :meth:`plot_centroid` :meth:`plot_perimeter` :func:`~machinevisiontoolbox.base.graphics.plot_labelbox`
         """
 
-        for blob in enumerate(self):
+        for blob in self:
             if label is None:
                 label = f"{blob.id}"
             plot_labelbox(text=label, lrbt=blob.bbox, **kwargs)
